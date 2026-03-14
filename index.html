@@ -18,8 +18,38 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
-    <h1 class="text-8xl py-10">Hello World</h1>
+<body class="bg-slate-200 flex items-center justify-center min-h-screen">
+    <div class="w-[400px] bg-white p-10 rounded-xl shadow-lg">
+        <div class="logo w-[180px] mx-auto mb-6 flex items-center justify-center">
+            <img src="assets/github-logo.png" alt="">
+        </div>
+        <div class="text-center mb-6">
+            <h1 class="text-2xl font-bold">GitHub Issues Tracker</h1>
+            <p class="text-gray-500 text-sm">Sign in to manage your issues</p>
+        </div>
+        <div class="card-body">
+            <fieldset id="loginForm" class="fieldset">
+                <label class="label">Email</label>
+                <input id="username" type="text" class="input" placeholder="Enter Username" />
+                <p class="text-xs text-gray-400 mt-1">Default: admin</p>
+                <label class="label">Password</label>
+                <input id="password" type="password" class="input" placeholder="Enter Password" />
+                <p class="text-xs text-gray-400 mt-1 mb-2">Default: admin123</p>
+                <div><a class="link link-hover">Forgot password?</a></div>
+                <button id="signIn-btn" type="submit"
+                    class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition mt-3">Sign
+                    In</button>
+            </fieldset>
+            <div class="text-center my-4 text-gray-400">OR</div>
+            <div class="text-center text-sm text-gray-600">
+                <p class="font-semibold">Demo Credentials</p>
+                <p>Username: admin</p>
+                <p>Password: admin123</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/login.js"></script>
 </body>
 
 </html>
