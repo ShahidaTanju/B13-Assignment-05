@@ -10,9 +10,13 @@ document.getElementById("signIn-btn").addEventListener("click", function () {
 
     if (name === "admin" && pass === "admin123") {
         alert("Login Sucessful");
+
+        window.location.assign("home.html");
+
     }
     else {
         alert("Invalid Username or Password");
+        return;
     }
 
 })
