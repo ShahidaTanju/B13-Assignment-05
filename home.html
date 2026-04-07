@@ -21,14 +21,15 @@
 <body>
     <header>
         <!-- navbar design -->
-        <nav class="bg-white shadow-md px-12 py-4 flex justify-between items-center">
+        <nav
+            class="bg-white max-w-8xl shadow-md px-12 py-4 flex flex-col md:flex-row md:justify-between md:items-center">
             <!-- left side -->
             <div class="flex items-center gap-2">
                 <img class="w-9 h-9" src="./assets/github-logo.png" alt="">
                 <h2 class="text-lg font-semibold text-gray-800">GitHub Issues Tracker</h2>
             </div>
             <!-- right side -->
-            <div class="flex items-center gap-3">
+            <div class="flex flex-col md:flex-row md:items-center gap-3">
                 <!-- search -->
                 <label class="input">
                     <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -46,12 +47,46 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="bg-gray-50">
+        <!-- tabs -->
+        <div class="max-w-7xl mx-auto p-10">
+            <div class="flex flex-col md:flex-row gap-4 p-4 border-b-0 shadow-md bg-white">
+                <button id="allBtn" class="bg-blue-600 text-white px-6 py-4 rounded-md text-sm">All</button>
+                <button id="openBtn" class="bg-gray-200  px-6 py-4 rounded-md text-sm">Open</button>
+                <button id="closedBtn" class="bg-gray-200 px-6 py-4 rounded-md text-sm">Closed</button>
+            </div>
+        </div>
+
+        <!-- Issues part -->
+        <div class="max-w-7xl mx-auto px-10 py-4">
+            <div class="p-4 border-b-0 shadow-md bg-white">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                    <div class="flex items-center gap-2">
+                        <img src="./assets/Aperture.png" alt="">
+                        <div>
+                            <h2 class="font-semibold text-gray-800">50 Issues</h2>
+                            <p class="md:text-sm text-gray-500">Track and manage your projects issues</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 text-md text-gray-600">
+                        <span>Open</span>
+                        <span>Close</span>
+                    </div>
+                </div>
+            </div>
+            <!-- card -->
+            <div id="cardContainer" class="bg-gray-100 p-10 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-2"></div>
+        </div>
 
     </main>
+
+
+
     <footer>
 
     </footer>
+
+    <script src="./scripts/cards.js"></script>
 </body>
 
 </html>
