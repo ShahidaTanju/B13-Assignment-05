@@ -51,11 +51,21 @@
         <!-- tabs -->
         <div class="max-w-7xl mx-auto p-10">
             <div class="flex flex-col md:flex-row gap-4 p-4 border-b-0 shadow-md bg-white">
-                <button id="allBtn" class="bg-blue-600 text-white px-6 py-4 rounded-md text-sm">All</button>
-                <button id="openBtn" class="bg-gray-200  px-6 py-4 rounded-md text-sm">Open</button>
-                <button id="closedBtn" class="bg-gray-200 px-6 py-4 rounded-md text-sm">Closed</button>
+                <button onclick="toggleStyle('all-btn')" id="all-btn"
+                    class="bg-blue-600 text-white px-6 py-4 rounded-md text-sm">All(<span
+                        id="all-count">0</span>)</button>
+                <button onclick="toggleStyle('open-btn')" id="open-btn"
+                    class="bg-gray-200  px-6 py-4 rounded-md text-sm">Open(<span id="open-count">0</span>)</button>
+                <button onclick="toggleStyle('closed-btn')" id="closed-btn"
+                    class="bg-gray-200 px-6 py-4 rounded-md text-sm">Closed(<span id="closed-count">0</span>)</button>
             </div>
         </div>
+
+
+        <!-- filtered card -->
+        <section id="filtered-section" class="hidden">
+
+        </section>
 
         <!-- Issues part -->
         <div class="max-w-7xl mx-auto px-10 py-4">
