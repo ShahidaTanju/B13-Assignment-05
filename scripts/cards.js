@@ -105,9 +105,27 @@ const displayCards = (cards) => {
         </div>
         </div>
         <p class="text-xs text-gray-500 mt-3">${card.createdAt}</p>
+
         `
         container.appendChild(div);
 
     };
 }
 loadCards();
+
+// modal :
+
+function openModal(data) {
+    const modal = document.getElementById("modal");
+    const content = document.getElementById("modalContent");
+
+    content.innerText = data;
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+}
+
+function closedModal() {
+    const modal = document.getElementById("modal");
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+}
